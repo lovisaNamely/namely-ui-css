@@ -1,41 +1,126 @@
 <!DOCTYPE html>
 <html class="namely-ui">
+
 <head>
   <title>Namely UI CSS</title>
   <link href="https://unpkg.com/namely-ui-css" rel="stylesheet" type="text/css">
   <!-- TOGGLE THIS IF YOU WANNA USE LOCAL STYLES -->
   <!-- <link href="../css/styles.css" rel="stylesheet" type="text/css"> -->
 </head>
+
 <body>
   <div class="p3">
     <h1>Namely UI CSS reference</h1>
-    <h3>Checkboxes:</h3>
-    <div class="flex flex-column p2">
-      <span class="mr2">.checkbox-white</span>
-      <label class="flex flex-center p2">
-        <span class="mr2">enabled checkbox</span>
-        <input class="checkbox-white" type="checkbox">
-      </label>
-      <label class="flex flex-center p2">
-        <span class="mr2">disabled checkbox</span>
-        <input class="checkbox-white" type="checkbox" disabled>
-      </label>
-      <label class="flex flex-center p2">
-        <span class="mr2">readonly checkbox checked</span>
-        <input class="checkbox-white" type="checkbox" readonly checked>
-      </label>
-      <label class="flex flex-center p2">
-        <span class="mr2">readonly checkbox unchecked</span>
-        <input class="checkbox-white" type="checkbox" readonly>
-      </label>
+    <div class="flex-auto overflow-scroll p4">
+      <div class="py3" id="Checkboxes">
+        <h2>Checkboxes</h2>
+        <div>
+          <div class="flex flex-column p2">
+            <span class="mr2">.checkbox-white</span>
+            <label class="flex flex-center p2">
+              <span class="mr2">enabled checkbox</span>
+              <input class="checkbox-white" type="checkbox">
+            </label>
+            <label class="flex flex-center p2">
+              <span class="mr2">disabled checkbox</span>
+              <input class="checkbox-white" type="checkbox" disabled>
+            </label>
+            <label class="flex flex-center p2">
+              <span class="mr2">readonly checkbox checked</span>
+              <input class="checkbox-white" type="checkbox" readonly checked>
+            </label>
+            <label class="flex flex-center p2">
+              <span class="mr2">readonly checkbox unchecked</span>
+              <input class="checkbox-white" type="checkbox" readonly>
+            </label>
+          </div>
+          <div class="flex flex-column bg-blue-80 p2">
+            <span class="mr2 white">.checkbox-blue</span>
+            <label class="flex flex-center p2 white">
+              <span class="mr2">enabled checkbox</span>
+              <input class="checkbox-blue" type="checkbox">
+            </label>
+          </div>
+        </div>
+      </div>
     </div>
-    <div class="flex flex-column bg-blue-80 p2">
-      <span class="mr2 white">.checkbox-blue</span>
-      <label class="flex flex-center p2 white">
-        <span class="mr2">enabled checkbox</span>
-        <input class="checkbox-blue" type="checkbox">
-      </label>
+    <hr/>
+    <div class="flex-auto overflow-scroll p4">
+      <div class="py3" id="Tables">
+        <h2>Tables</h2>
+        <p>The table styles for Namely</p>
+        <div>
+          <h3 class="mb0">Basic Tables</h3>
+          <table class="table mb4">
+            <thead class="thead">
+              <tr class="tr secondary">
+                <th class="th"></th>
+                <th class="th" colspan="3">Second tier header</th>
+              </tr>
+              <tr>
+                <th class="th">Name</th>
+                <th class="th center">Number</th>
+                <th class="th">Status</th>
+                <th class="th">Header</th>
+              </tr>
+            </thead>
+            <tbody class="tbody">
+              <tr class="tr">
+                <td class="td">
+                  <h5 class="mb0 blue-70">Lorem ipsum</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis dictum nulla, quis hendrerit felis. Suspendisse potenti</p>
+                </td>
+                <td class="center td">4</td>
+                <td class="td"><span class="yellow">Pending</span></td>
+                <td class="td">lorem</td>
+              </tr>
+              <tr class="tr">
+                <td class="td">more</td>
+                <td class="td center">150</td>
+                <td class="td"><span class="green">Approved</span></td>
+                <td class="td">ipsum</td>
+              </tr>
+              <tr class="tr">
+                <td class="td">more</td>
+                <td class="td center">0.2</td>
+                <td class="td"><span class="orange">Declined</span></td>
+                <td class="td">dolor</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="mb0">Sortable Tables</h3>
+          <table class="table">
+            <thead class="thead">
+              <tr class="tr">
+                <th class="th pointer"><span class="flex flex-center">First<span class="ml1 blue-50 small pointer icon-arrow-double"></span></span>
+                </th>
+                <th class="th"><span class="flex flex-center">Last</span></th>
+                <th class="th pointer"><span class="flex flex-center">Start Date<span class="ml1 blue-50 small pointer icon-arrow-up"></span></span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="tr">
+                <td class="td" name="flava">Flava</td>
+                <td class="td">Flav</td>
+                <td class="td" data-date="2012">2012-06-28</td>
+              </tr>
+              <tr class="tr">
+                <td class="td" name="chuck">Chuck</td>
+                <td class="td">D</td>
+                <td class="td" data-date="2013">2013-03-15</td>
+              </tr>
+              <tr class="tr">
+                <td class="td" name="john">John</td>
+                <td class="td">Smith</td>
+                <td class="td" data-date="2014">2014-01-01</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </body>
+
 </html>

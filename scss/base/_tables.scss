@@ -1,3 +1,4 @@
+/* --- using plain selectors for styling is deprecated, use the same styles defined below as classes --- */
 table {
   border-collapse: separate;
   border-spacing: 0;
@@ -5,8 +6,24 @@ table {
   width: 100%;
 }
 
-thead tr th {
+thead {
   border-bottom: 3px solid $grey-25;
+}
+
+tr {
+  border-bottom: 3px solid $grey-25;
+}
+
+th {
+  border-bottom: 3px solid $grey-25;
+
+  font-size: 1rem;
+  font-weight: bold;
+  padding: $space-2;
+  text-align: left;
+  vertical-align: bottom;
+
+  line-height: inherit;
 }
 
 thead .secondary {
@@ -22,21 +39,9 @@ thead .secondary {
   }
 }
 
-th {
-  font-size: 1rem;
-  font-weight: bold;
-  padding: $space-2;
-  text-align: left;
-  vertical-align: bottom;
-
-}
-
-th,
 td {
   line-height: inherit;
-}
 
-td {
   padding: $space-2;
   vertical-align: top;
 }
@@ -57,3 +62,55 @@ tbody tr:last-child td {
   border-bottom: 0;
 }
 
+/* --- Same as above but uses classes instead --- */
+.table {
+  border-collapse: separate;
+  border-spacing: 0;
+  max-width: 100%;
+  width: 100%;
+}
+
+.thead,
+.tr,
+.th {
+  border-bottom: 3px solid $grey-25;
+}
+
+.th {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: $space-2;
+  text-align: left;
+  vertical-align: bottom;
+  line-height: inherit;
+}
+
+.td {
+  line-height: inherit;
+  padding: $space-2;
+  vertical-align: top;
+}
+
+.thead .secondary .th {
+  border-bottom: 0;
+}
+
+.thead .secondary .th:last-child {
+  border-bottom: 1px solid $grey-25;
+  color: $grey-50;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.tbody .tr:hover {
+  background-color: $grey-5;
+}
+
+.tbody .tr .td {
+  border-bottom: 1px solid $grey-5;
+  margin-bottom: 0rem;
+}
+
+.tbody .tr:last-child .td {
+  border-bottom: 0;
+}
